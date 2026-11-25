@@ -11,10 +11,11 @@ if (
   JOKE.length < 1 ||
   JOKE.length > 200 ||
   JOKE.trim().length === 0 ||
-  JOKE.includes("\n")
+  JOKE.includes("\n") ||
+  JOKE !== JOKE.trim()
 ) {
   throw new Error(
-    `office joke must be one line of 1-200 non-blank characters, got ${JOKE.length}`,
+    `office joke must be one tight line of 1-200 non-blank characters, got ${JOKE.length}`,
   );
 }
 
